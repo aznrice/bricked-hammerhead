@@ -246,7 +246,7 @@ static int sha256_init(struct shash_desc *desc)
 	return 0;
 }
 
-static int crypto_sha256_update(struct shash_desc *desc, const u8 *data,
+int crypto_sha256_update(struct shash_desc *desc, const u8 *data,
 			  unsigned int len)
 {
 	struct sha256_state *sctx = shash_desc_ctx(desc);
